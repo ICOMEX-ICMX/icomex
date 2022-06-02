@@ -1,0 +1,33 @@
+# /etc/conf.d/icomexd: config file for /etc/init.d/icomexd
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/icomex/icomex.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/icomexd"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/icomexd.pid"
+
+# Where to write icomexd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/icomexd"
+
+# User and group to own icomexd process
+#BITCOIND_USER="icomex"
+#BITCOIND_GROUP="icomex"
+
+# Path to icomexd executable
+#BITCOIND_BIN="/usr/bin/icomexd"
+
+# Nice value to run icomexd under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+#BITCOIND_OPTS=""
+
+# The timeout in seconds OpenRC will wait for icomexd to terminate
+# after a SIGTERM has been raised.
+# Note that this will be mapped as argument to start-stop-daemon's
+# '--retry' option, which means you can specify a retry schedule
+# here. For more information see man 8 start-stop-daemon.
+BITCOIND_SIGTERM_TIMEOUT=600
